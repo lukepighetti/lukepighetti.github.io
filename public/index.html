@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luke Pighetti's Links</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 25px;
+      }
+
+      .background {
+        background: linear-gradient(rgb(71, 163, 255), rgb(32, 111, 190));
+        min-height: 100vh;
+      }
+
+      .avatar {
+        border-radius: 999px;
+        border: 5px solid white;
+        height: 100px;
+        width: 100px;
+      }
+
+      .display-name {
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      .link {
+        width: 100%;
+        max-width: 600px;
+        height: 60px;
+        border-radius: 999px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1.5px solid rgba(255, 255, 255, 0.494);
+        color: white;
+        text-decoration: none;
+        margin: 8px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      /* Compositional classes */
+
+      .column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ma-center {
+        justify-content: center;
+      }
+
+      .ca-center {
+        align-items: center;
+      }
+
+      .with-margin {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body class="background column ca-center">
+    <img
+      class="avatar with-margin"
+      src="https://pbs.twimg.com/profile_images/1561757104830128134/m76wauOT_400x400.jpg"
+    />
+
+    <!-- TODO: add share button -->
+
+    <p class="display-name with-margin">Luke Pighetti</p>
+
+    <a class="link" href="https://twitter.com/luke_pighetti"> Twitter </a>
+
+    <a class="link" href="https://github.com/lukepighetti"> GitHub </a>
+
+    <a class="link" href="https://twitch.tv/lukepighetti"> Twitch </a>
+
+    <a class="link" href="https://discord.gg/nU5KYNrD"> Discord </a>
+
+    <a
+      class="link"
+      href="https://www.youtube.com/channel/UCaZ2cNfzVDi8Ujy0lF7Lc3g"
+    >
+      YouTube
+    </a>
+  </body>
+</html>
