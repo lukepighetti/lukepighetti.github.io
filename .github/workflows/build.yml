@@ -1,0 +1,21 @@
+name: build
+
+on:
+  push:
+    branches: [lukepighetti/actions]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: arduino/setup-task@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: task build
+      - uses: actions/upload-pages-artifact@v1
+        inputs:
+          path: dist
+      - uses: actions/deploy-pages@v1
