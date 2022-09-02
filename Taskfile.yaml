@@ -7,4 +7,4 @@ tasks:
 
   build:
     - task: clean
-    - npx parcel build public/index.html
+    - npx --yes parcel build public/index.html
