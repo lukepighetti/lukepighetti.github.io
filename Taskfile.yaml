@@ -1,9 +1,11 @@
 version: "3"
 
 tasks:
-  serve: npx parcel public/index.html
-
   clean: rm -rf dist
+
+  serve:
+    - task: clean
+    - npx parcel public/index.html
 
   build:
     - task: clean
