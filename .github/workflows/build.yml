@@ -16,6 +16,6 @@ jobs:
           node-version: 16
       - run: task build
       - uses: actions/upload-pages-artifact@v1
-        inputs:
+        with:
           path: dist
       - uses: actions/deploy-pages@v1
