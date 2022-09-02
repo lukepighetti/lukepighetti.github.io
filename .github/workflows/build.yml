@@ -2,9 +2,9 @@ name: build
 
 on:
   push:
-    branches: [lukepighetti/actions]
+    branches: [main]
 
-  # workflow_dispatch:
+  workflow_dispatch:
 
 permissions:
   contents: read
