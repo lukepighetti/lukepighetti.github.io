@@ -1,103 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- TODO: favicon -->
-    <!-- TODO: social cards -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luke Pighetti's Links</title>
-    <style>
-      body {
-        font-family: system-ui, sans-serif;
-        padding: 25px;
-      }
+<head>
+  <!-- TODO: favicon -->
+  <!-- TODO: social cards -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luke Pighetti's Links</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 25px;
+    }
 
-      .background {
-        background: linear-gradient(rgb(71, 163, 255), rgb(32, 111, 190));
-        min-height: 100vh;
-      }
+    .background {
+      background: linear-gradient(rgb(71, 163, 255), rgb(32, 111, 190));
+      min-height: 100vh;
+    }
 
-      .avatar {
-        border-radius: 999px;
-        border: 3px solid white;
-        height: 100px;
-        width: 100px;
-      }
+    .avatar {
+      border-radius: 999px;
+      border: 3px solid white;
+      height: 100px;
+      width: 100px;
+    }
 
-      .display-name {
-        color: white;
-        font-size: 20px;
-        font-weight: 500;
-        margin: 20px;
-      }
+    .display-name {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      margin: 20px;
+    }
 
-      .link {
-        width: 100%;
-        max-width: 600px;
-        height: 60px;
-        border-radius: 999px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1.5px solid rgba(255, 255, 255, 0.5);
-        color: white;
-        text-decoration: none;
-        margin: 8px;
-        font-weight: 600;
-        font-size: 14px;
-      }
+    .link {
+      width: 100%;
+      max-width: 600px;
+      height: 60px;
+      border-radius: 999px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      color: white;
+      text-decoration: none;
+      margin: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
 
-      .link:hover {
-        border: 1.5px solid rgba(255, 255, 255, 0.8);
-        background-color: rgba(255, 255, 255, 0.1);
-      }
+    .link:hover {
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
 
-      .link-icon {
-        margin-right: 10px;
-        height: 24px;
-        width: 24px;
-      }
+    .link-icon {
+      margin-right: 10px;
+      height: 24px;
+      width: 24px;
+    }
 
-      .share {
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        cursor: pointer;
-      }
+    .share {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      cursor: pointer;
+    }
 
-      button.share {
-        background: none;
-        border: 0;
+    button.share {
+      background: none;
+      border: 0;
 
-        background-color: white;
-        border-radius: 999px;
-        height: 50px;
-        width: 50px;
-      }
+      background-color: white;
+      border-radius: 999px;
+      height: 50px;
+      width: 50px;
+    }
 
-      button.share:hover {
-        opacity: 50%;
-      }
+    button.share:hover {
+      opacity: 50%;
+    }
 
-      /* Compositional classes */
+    /* Compositional classes */
 
-      .column {
-        display: flex;
-        flex-direction: column;
-      }
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
 
-      .ma-center {
-        justify-content: center;
-      }
-
-      .ca-center {
-        align-items: center;
-      }
-
-      .with-margin {
-        margin: 20px;
-      }
+    .with-margin {
+      margin: 20px;
+    }
+    
+    .ca-center {
+      align-items: center;
+    }
     </style>
     <script>
       function share() {
@@ -108,69 +104,51 @@
       }
     </script>
   </head>
-  <body class="background column ca-center">
-    <img
-      class="avatar with-margin"
-      alt="Luke's avatar"
-      src="https://pbs.twimg.com/profile_images/1561757104830128134/m76wauOT_400x400.jpg"
-    />
+  <script>
+    function share() {
+      console.log("share!");
+      navigator.share({
+        url: "https://lukepighett.com",
+        title: "Luke Pighetti",
+      });
+    }
+  </script>
+</head>
 
-    <button
-      type="button"
-      title="Share Luke's page"
-      class="share"
-      onclick="share()"
-    >
-      <img src="./assets/share.svg" />
-    </button>
+<body class="background column ca-center">
+  <img class="avatar with-margin" alt="Luke's avatar" src="./assets/avatar.png" />
 
-    <p class="display-name with-margin">Luke Pighetti</p>
+  <button type="button" title="Share Luke's page" class="share" onclick="share()">
+    <img src="./assets/share.svg" />
+  </button>
 
-    <a
-      aria-label="Luke's Twitter"
-      class="link"
-      href="https://twitter.com/luke_pighetti"
-    >
-      <img class="link-icon" src="./assets/twitter.svg" />
-      Twitter
-    </a>
+  <p class="display-name with-margin">Luke Pighetti</p>
 
-    <a
-      aria-label="Luke's GitHub"
-      class="link"
-      href="https://github.com/lukepighetti"
-    >
-      <img class="link-icon" src="./assets/github.svg" />
-      GitHub
-    </a>
+  <a aria-label="Luke's Twitter" class="link" href="https://twitter.com/luke_pighetti">
+    <img class="link-icon" src="./assets/twitter.svg" />
+    Twitter
+  </a>
 
-    <a
-      aria-label="Luke's Twitch channel"
-      class="link"
-      href="https://twitch.tv/lukepighetti"
-    >
-      <img class="link-icon" src="./assets/twitch.svg" />
-      Twitch
-    </a>
+  <a aria-label="Luke's GitHub" class="link" href="https://github.com/lukepighetti">
+    <img class="link-icon" src="./assets/github.svg" />
+    GitHub
+  </a>
 
-    <a
-      aria-label="Luke's Discord"
-      class="link"
-      href="https://discord.gg/g84tgDYVnb"
-    >
-      <img class="link-icon" src="./assets/discord.svg" />
-      Discord
-    </a>
+  <a aria-label="Luke's Twitch channel" class="link" href="https://twitch.tv/lukepighetti">
+    <img class="link-icon" src="./assets/twitch.svg" />
+    Twitch
+  </a>
 
-    <a
-      aria-label="Luke's YouTube channel"
-      class="link"
-      href="https://www.youtube.com/c/LukePighetti"
-    >
-      <img class="link-icon" src="./assets/youtube.svg" />
-      YouTube
-    </a>
+  <a aria-label="Luke's Discord" class="link" href="https://discord.gg/g84tgDYVnb">
+    <img class="link-icon" src="./assets/discord.svg" />
+    Discord
+  </a>
 
-    <!-- TODO: onlyfans -->
-  </body>
+  <a aria-label="Luke's YouTube channel" class="link" href="https://www.youtube.com/channel/UCaZ2cNfzVDi8Ujy0lF7Lc3g">
+    <img class="link-icon" src="./assets/youtube.svg" />
+    YouTube
+  </a>
+
+  <!-- TODO: onlyfans -->
+</body>
 </html>
